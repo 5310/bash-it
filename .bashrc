@@ -34,5 +34,8 @@ export SCM_CHECK=true
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
+# Go stuff
+export GOPATH=$HOME/Documents/gopath
+
 # Load Bash It
 source $BASH_IT/bash_it.sh
