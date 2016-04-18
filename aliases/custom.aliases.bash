@@ -1,1 +1,1 @@
-/home/scio/.bash_it/custom/custom.aliases.bash
+../custom/custom.aliases.bash
