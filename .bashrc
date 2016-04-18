@@ -13,7 +13,7 @@ export PROJECT_PATHS=/media/Active/Projects/Personal/
 trap 'printf "\e[0m" "$_"' DEBUG
 
 # Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
+#export GIT_HOSTING='git@git.domain.com'
 
 # Load Bash It
 export EDITOR='slap'
