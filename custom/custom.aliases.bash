@@ -7,3 +7,4 @@ alias ds=ncdu
 alias es='babel-node --presets "es2015,stage-1"'
 alias git=hub
 alias npmup='sudo npm update -g'
+alias pipup='sudo pip install -U $(pip list | cut -d " " -f 1)'
