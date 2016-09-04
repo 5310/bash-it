@@ -7,6 +7,7 @@ export BASH_IT="/home/scio/.bash_it"
 # location /.bash_it/themes/
 export BASH_IT_THEME='powerline-newline'
 
+# Set custom project path.
 export PROJECT_PATHS=/media/Active/Projects/Personal/
 
 # Reset the console output text formatting.
