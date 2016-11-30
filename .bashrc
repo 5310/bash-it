@@ -17,7 +17,7 @@ trap 'printf "\e[0m" "$_"' DEBUG
 #export GIT_HOSTING='git@git.domain.com'
 
 # Load Bash It
-export EDITOR='slap'
+export EDITOR='nano'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
