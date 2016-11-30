@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 
 THEME_PROMPT_SEPARATOR=""
-THEME_PROMPT_TERMINAL="$"
+THEME_PROMPT_SEPARATOR="›" # tty-safe
+THEME_PROMPT_TERMINAL=" » "
 
 SHELL_SSH_CHAR=" "
+SHELL_SSH_CHAR="[ssh] " # tty-safe
 SHELL_THEME_PROMPT_COLOR=32
 SHELL_SSH_THEME_PROMPT_COLOR=208
 
 VIRTUALENV_CHAR="ⓔ "
+VIRTUALENV_CHAR="[virt] " # tty-safe
 VIRTUALENV_THEME_PROMPT_COLOR=35
 
 SCM_NONE_CHAR=""
 SCM_GIT_CHAR=" "
+SCM_GIT_CHAR="[git] " # tty-safe
 
 SCM_THEME_PROMPT_CLEAN=""
 SCM_THEME_PROMPT_DIRTY=""
@@ -89,7 +93,7 @@ function powerline_cwd_prompt {
 
 function powerline_last_status_prompt {
     if [[ "$1" -eq 0 ]]; then
-        LAST_STATUS_PROMPT="\n    ${THEME_PROMPT_TERMINAL}"
+        LAST_STATUS_PROMPT="\n${THEME_PROMPT_TERMINAL}"
     else
         LAST_STATUS_PROMPT="${THEME_PROMPT_SEPARATOR}$(set_rgb_color ${LAST_STATUS_THEME_PROMPT_COLOR} -) ${LAST_STATUS} ${normal}\n    ${THEME_PROMPT_TERMINAL}"
     fi
@@ -104,7 +108,7 @@ function powerline_prompt_command() {
     powerline_cwd_prompt
     powerline_last_status_prompt LAST_STATUS
 
-    PS1="\n${SHELL_PROMPT}${VIRTUALENV_PROMPT}${SCM_PROMPT}${CWD_PROMPT}${LAST_STATUS_PROMPT} » {bold_white}"
+    PS1="\n${SHELL_PROMPT}${VIRTUALENV_PROMPT}${SCM_PROMPT}${CWD_PROMPT}${LAST_STATUS_PROMPT} ${bold_white}"
 }
 
 PROMPT_COMMAND=powerline_prompt_command

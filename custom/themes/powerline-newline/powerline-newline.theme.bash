@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 THEME_PROMPT_SEPARATOR=""
+THEME_PROMPT_TERMINAL=" » "
 
 SHELL_SSH_CHAR=" "
 SHELL_THEME_PROMPT_COLOR=30
@@ -126,7 +127,7 @@ function powerline_prompt_command() {
     powerline_cwd_prompt
     powerline_last_status_prompt LAST_STATUS
 
-    PS1="\n${SHELL_PROMPT}${IN_VIM_PROMPT}${VIRTUALENV_PROMPT}${SCM_PROMPT}${CWD_PROMPT}${LAST_STATUS_PROMPT}\n » ${bold_white}"
+    PS1="\n${SHELL_PROMPT}${IN_VIM_PROMPT}${VIRTUALENV_PROMPT}${SCM_PROMPT}${CWD_PROMPT}${LAST_STATUS_PROMPT}\n${THEME_PROMPT_TERMINAL}${bold_white}"
 }
 
 PROMPT_COMMAND=powerline_prompt_command
