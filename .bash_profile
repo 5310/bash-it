@@ -8,7 +8,7 @@
 ###
 
 # Path to the bash it configuration
-export BASH_IT="/home/scio/.bash_it"
+export BASH_IT="/home/$(whoami)/.bash_it"
 
 # Inherit the default .bashrc
 source $BASH_IT/.bashrc
