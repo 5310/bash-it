@@ -8,7 +8,7 @@ export BASH_IT="/home/scio/.bash_it"
 export BASH_IT_THEME='powerline-newline'
 
 # Set custom project path.
-export PROJECT_PATHS=/media/Active/Projects/Personal/
+#export PROJECT_PATHS=<insert-project-path>
 
 # Reset the console output text formatting.
 trap 'printf "\e[0m" "$_"' DEBUG
@@ -39,7 +39,7 @@ export SCM_CHECK=true
 export GOPATH=$HOME/Documents/gopath
 
 # OpenColorIO config
-export OCIO=/media/Archive/Miscellany/Color\ Profiles/filmic-blender-master/config.ocio
+#export OCIO=<insert-ocio-path>
 
 # Ntfy integration
 eval "$(ntfy shell-integration)"
