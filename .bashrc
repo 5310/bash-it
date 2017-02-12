@@ -6,9 +6,10 @@ export BASH_IT="$HOME/.bash_it"
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 export BASH_IT_THEME='powerline-newline'
+VIRTUALENV_THEME_PROMPT_COLOR=125
 
 # Set custom project path.
-export PROJECT_PATHS="$HOME/Active/Projects/Personal/"
+export PROJECT_PATHS=/home/pi
 
 # Reset the console output text formatting.
 trap 'printf "\e[0m" "$_"' DEBUG
