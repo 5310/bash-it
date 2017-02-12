@@ -39,7 +39,7 @@ export SCM_CHECK=true
 export GOPATH=$HOME/Documents/gopath
 
 # OpenColorIO config
-export OCIO=/media/Archive/Miscellany/Color\ Profiles/spi-anim/config.ocio
+export OCIO=/media/Archive/Miscellany/Color\ Profiles/filmic-blender-master/config.ocio
 
 # Ntfy integration
 eval "$(ntfy shell-integration)"
