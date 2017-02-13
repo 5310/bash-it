@@ -36,7 +36,7 @@ export SCM_CHECK=true
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
 # Ntfy integration
-eval "$(ntfy shell-integration)"
+#eval "$(ntfy shell-integration)"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
