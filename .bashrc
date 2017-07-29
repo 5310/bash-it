@@ -38,6 +38,9 @@ export SCM_CHECK=true
 # Go stuff
 export GOPATH=$HOME/Documents/gopath
 
+# Rust stuff
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # OpenColorIO config
 #export OCIO=<insert-ocio-path>
 
