@@ -49,3 +49,6 @@ eval "$(ntfy shell-integration)"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+# Enable globstar
+shopt -s globstar
