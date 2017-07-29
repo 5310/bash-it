@@ -1,0 +1,7 @@
+[user]
+	email = sayantan.chaudhuri@gmail.com
+	name = Sayantan Chaudhuri
+[push]
+	default = matching
+[pull]
+	rebase = true
