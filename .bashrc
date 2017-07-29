@@ -42,7 +42,7 @@ export GOPATH=$HOME/Documents/gopath
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # OpenColorIO config
-#export OCIO=<insert-ocio-path>
+export OCIO=/media/Archive/Miscellany/Color\ Profiles/active-profile/config.ocio
 
 # Ntfy integration
 eval "$(ntfy shell-integration)"
