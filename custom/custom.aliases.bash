@@ -12,6 +12,9 @@ alias pipup='sudo pip install -U $(pip list | cut -d " " -f 1)'
 gccr () {
   gcc -o ${1%.*} $1 && ./${1%.*}
 }
+g++r () {
+  g++ -o ${1%.*} $1 && ./${1%.*}
+}
 javar () {
   javac $1 && java ${1%.*}
 }
