@@ -52,3 +52,6 @@ source $BASH_IT/bash_it.sh
 
 # Enable globstar
 shopt -s globstar
+
+# Expose local Node modules per-project
+export PATH="$PATH:node_modules/.bin"
