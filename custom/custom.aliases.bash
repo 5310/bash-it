@@ -19,3 +19,6 @@ g++r () {
 javar () {
   javac $1 && java ${1%.*}
 }
+
+# Some IPFS aliases.
+alias ipfspins='echo; for hash in $(ipfs pin ls -t "recursive" --quiet); do echo -n $hash; if ipfs ls $hash >/dev/null 2>/dev/null; then echo " directory:"; ipfs ls $hash | head -n 10 | sed "s/^/    /"; else echo " content:"; ipfs cat $hash | head -10 | sed "s/^/    /"; fi; echo; done'
