@@ -120,15 +120,15 @@ function powerline_in_vim_prompt {
 function powerline_prompt_command() {
     local LAST_STATUS="$?"
 
-    powerline_shell_prompt
+    #powerline_shell_prompt
     powerline_in_vim_prompt
     powerline_virtualenv_prompt
     powerline_scm_prompt
     powerline_cwd_prompt
     powerline_last_status_prompt LAST_STATUS
 
-    PS1="\n${SHELL_PROMPT}${IN_VIM_PROMPT}${VIRTUALENV_PROMPT}${SCM_PROMPT}${CWD_PROMPT}${LAST_STATUS_PROMPT}\n${THEME_PROMPT_TERMINAL}${bold_white}"
+    PS1="\n${IN_VIM_PROMPT}${VIRTUALENV_PROMPT}${SCM_PROMPT}${CWD_PROMPT}${LAST_STATUS_PROMPT}\n${THEME_PROMPT_TERMINAL}${bold_white}"
+    # The very first `${SHELL_PROMPT}` segment removed because it's redundant in Termux
 }
 
 PROMPT_COMMAND=powerline_prompt_command
-
