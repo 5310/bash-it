@@ -8,7 +8,7 @@ export BASH_IT="$HOME/.bash_it"
 export BASH_IT_THEME='powerline-newline'
 
 # Set custom project path.
-export PROJECT_PATHS="$HOME/Active/Projects/Personal/"
+# export PROJECT_PATHS="$HOME/Active/Projects/Personal/"
 
 # Reset the console output text formatting.
 trap 'printf "\e[0m" "$_"' DEBUG
@@ -36,7 +36,7 @@ export SCM_CHECK=true
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
 # Ntfy integration
-eval "$(ntfy shell-integration)"
+# eval "$(ntfy shell-integration)"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
@@ -45,24 +45,24 @@ source $BASH_IT/bash_it.sh
 shopt -s globstar
 
 # Local binaries
-export PATH="$HOME/.local/bin:$PATH"
+# export PATH="$HOME/.local/bin:$PATH"
 
 # Set Rust path
-export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 # Set Deno path
-if [ -e "$HOME/.deno" ]; then 
-  export DENO_INSTALL="$HOME/.deno"
-  export PATH="$DENO_INSTALL/bin:$PATH"
-fi
+# if [ -e "$HOME/.deno" ]; then 
+#   export DENO_INSTALL="$HOME/.deno"
+#   export PATH="$DENO_INSTALL/bin:$PATH"
+# fi
 
 # Set OpenColorIO path
-export OCIO="$HOME/Archive/Miscellany/Color Profiles/active-profile/config.ocio"
+#export OCIO="$HOME/Archive/Miscellany/Color Profiles/active-profile/config.ocio"
 
 # Set QT5 Configuration Manager flag
-export QT_QPA_PLATFORMTHEME="gtk2"
+#export QT_QPA_PLATFORMTHEME="gtk2"
 
 # Initialize Nix
-if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then 
-  . "$HOME/.nix-profile/etc/profile.d/nix.sh"
-fi
+# if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then 
+#   . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+# fi
