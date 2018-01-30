@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Path to the bash it configuration
-export BASH_IT="$HOME/.bash_it"
+# Path to the bash it configuration, FOR TERMUX!
+export BASH_IT="/data/data/com.termux/files/home/.bash-it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
