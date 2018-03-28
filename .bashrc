@@ -8,7 +8,7 @@ export BASH_IT="/home/$(whoami)/.bash_it"
 export BASH_IT_THEME='powerline-newline'
 
 # Set custom project path.
-#export PROJECT_PATHS=~/Active/Projects/Personal/
+export PROJECT_PATHS=~/Active/Projects/Personal/
 
 # Reset the console output text formatting.
 trap 'printf "\e[0m" "$_"' DEBUG
