@@ -55,3 +55,9 @@ shopt -s globstar
 
 # Expose local Node modules per-project
 export PATH="$PATH:node_modules/.bin"
+
+# Setup Nix (originally added by the installed but then moved to proper file
+if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then 
+  . ~/.nix-profile/etc/profile.d/nix.sh
+fi
+
