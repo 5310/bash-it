@@ -57,3 +57,6 @@ shopt -s globstar
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then 
   . ~/.nix-profile/etc/profile.d/nix.sh
 fi
+
+# Export local binary path because it's needed in 18.04+
+export PATH="$PATH:/home/$(whoami)/.local/bin"
