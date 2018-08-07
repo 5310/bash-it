@@ -8,7 +8,7 @@ export BASH_IT="/home/$(whoami)/.bash_it"
 export BASH_IT_THEME='powerline-newline'
 
 # Set custom project path.
-export PROJECT_PATHS=~/Active/Projects/Personal/
+export PROJECT_PATHS=/mnt/Active/Projects/Personal/
 
 # Reset the console output text formatting.
 trap 'printf "\e[0m" "$_"' DEBUG
@@ -42,7 +42,7 @@ export GOPATH=$HOME/Documents/gopath
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # OpenColorIO config
-export OCIO=/media/Archive/Miscellany/Color\ Profiles/active-profile/config.ocio
+export OCIO=/mnt/Archive/Miscellany/Color\ Profiles/active-profile/config.ocio
 
 # Ntfy integration
 eval "$(ntfy shell-integration)"
