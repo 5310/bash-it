@@ -1,1 +1,0 @@
-../available/fasd.plugin.bash
