@@ -8,7 +8,7 @@ alias ds=ncdu
 alias git=hub
 alias npmup='sudo npm update -g'
 alias pipup='sudo pip install -U $(pip list | cut -d " " -f 1)'
-alias pnpmup='sudo pnpm update -g'
+alias pnpmup='sudo pnpm update -g $(pnpm ls -g | tail -n +2 | cut -c 11- | cut -d @ -f 1)'
 alias xt='exa -bhHlST --git'
 alias x='exa -bhHlS --git'
 
