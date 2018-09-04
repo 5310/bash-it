@@ -3,7 +3,7 @@ about-alias 'Personal alises'
 
 alias a='atom . && echo Opening Atom in "$(pwd)/"'
 alias aptupgd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y'
-alias cat='bat'
+alias cat='bat --paging never'
 alias ds=ncdu
 alias git=hub
 alias npmup='sudo npm update -g'
