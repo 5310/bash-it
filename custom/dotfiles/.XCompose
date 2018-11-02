@@ -1289,11 +1289,13 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 ### And then overridden with custom sequences. ###
 
-<Multi_key> <Multi_key> <t> <e> <x> <i> <s> <t>     	: "∃"  U2203 # THERE EXISTS
-<Multi_key> <Multi_key> <n> <e> <x> <i> <s> <t>     	: "∄"   U2204 # THERE DOES NOT EXIST
-<Multi_key> <Multi_key> <f> <o> <r> <a> <l> <l>     	: "∀"  U2200 # FOR ALL
+<Multi_key> <Multi_key> <t> <e> <x> <i> <s> <t>     	: "∃" U2203 # THERE EXISTS
+<Multi_key> <Multi_key> <n> <e> <x> <i> <s> <t>     	: "∄" U2204 # THERE DOES NOT EXIST
+<Multi_key> <Multi_key> <f> <o> <r> <a> <l> <l>     	: "∀" U2200 # FOR ALL
 
-<Multi_key> <Multi_key> <dollar> <i> <n> <r>            : "₹"  U20B9 # INR
-<Multi_key> <R> <->            				: "₹"  U20B9 # INR
-<Multi_key> <Multi_key> <dollar> <x> <b> <t>		: "฿" U0E3F # BITCOIN CURRENCY SIGN, ORIGINAL THAI CURRENCY SYMBOL BAHT
-<Multi_key> <Multi_key> <dollar> <b> <t> <c>		: "฿" U0E3F # BITCOIN CURRENCY SIGN, ORIGINAL THAI CURRENCY SYMBOL BAHT
+<Multi_key> <Multi_key> <dollar> <i> <n> <r>          : "₹" U20B9 # INR
+<Multi_key> <R> <bar>            				              : "₹" U20B9 # INR
+<Multi_key> <Multi_key> <dollar> <x> <b> <t>		      : "฿" U0E3F # BITCOIN CURRENCY SIGN, ORIGINAL THAI CURRENCY SYMBOL BAHT
+<Multi_key> <Multi_key> <dollar> <b> <t> <c>		      : "฿" U0E3F # BITCOIN CURRENCY SIGN, ORIGINAL THAI CURRENCY SYMBOL BAHT
+<Multi_key> <Multi_key> <dollar> <e> <t> <h>		      : "Ξ"	U039E	# EHER CURRENCY SIGN, ORIGINALLY GREEK CAPITAL LETTER XI
+<Multi_key> <E> <bar>		                              : "Ξ"	U039E	# EHER CURRENCY SIGN, ORIGINALLY GREEK CAPITAL LETTER XI
