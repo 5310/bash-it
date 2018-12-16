@@ -59,4 +59,5 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
 fi
 
 # Export local binary path because it's needed in 18.04+
-export PATH="$PATH:/home/$(whoami)/.local/bin"
+# Now local path overrides the system one!
+export PATH="/home/$(whoami)/.local/bin:$PATH"
