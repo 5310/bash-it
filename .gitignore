@@ -7,4 +7,3 @@ bats
 .idea
 *.sublime-workspace
 *.sublime-project
-enabled/*
