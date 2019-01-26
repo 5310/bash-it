@@ -25,3 +25,23 @@ javar () {
 
 # Some IPFS aliases.
 alias ipfspins='echo; for hash in $(ipfs pin ls -t "recursive" --quiet); do echo -n $hash; if ipfs ls $hash >/dev/null 2>/dev/null; then echo " directory:"; ipfs ls $hash | head -n 10 | sed "s/^/    /"; else echo " content:"; ipfs cat $hash | head -10 | sed "s/^/    /"; fi; echo; done'
+
+# List globally installed Node packages
+nodels() { #TODO: pad fields
+  echo via npm:
+  for package in $(npm list -g --parseable --depth=0 | tail -n +2); do
+    packagename=$(basename $package)
+    echo '  ' $packagename $(fx \
+      "x => typeof x.bin==='object' ? Object.keys(x.bin)[0]==='$packagename' ? '$' : '$ '+Object.keys(x.bin)[0] : typeof x.bin==='string' ? '$' : ''" \
+      < $package/package.json\
+    )
+  done
+  echo via pnpm:
+  for package in $(pnpm list -g --parseable --depth=0 | tail -n +2); do
+    packagename=$(basename $(dirname $package))
+    echo '  ' $packagename $(fx \
+      "x => typeof x.bin==='object' ? Object.keys(x.bin)[0]==='$packagename' ? '$' : '$ '+Object.keys(x.bin)[0] : typeof x.bin==='string' ? '$' : ''" \
+      < $package/node_modules/$packagename/package.json\
+    )
+  done
+}
