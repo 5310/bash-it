@@ -8,7 +8,8 @@ alias ds=ncdu
 alias git=hub
 alias npmup='sudo npm update -g'
 alias pipup='sudo pip install -U $(pip list | cut -d " " -f 1 | tail -n +3)'
-alias pnpmup='sudo pnpm i -g pnpm && sudo pnpm install -g $(sudo pnpm outdated -g | egrep ║$ | tail -n +2 | cut -d " " -f 1)'
+alias pnpmup='sudo pnpm i -g pnpm && sudo pnpm install -g $(pnpm list -g --json | fx this[0].dependencies "Object.keys(this).join(\" \")")' # depends on npm:fx
+#alias pnpmup='sudo pnpm i -g pnpm && sudo pnpm install -g $(pnpm list -g --json | grep '"from":' | cut -d " " -f 10 | cut -c 2- | rev | cut -c 3- | rev)' # plain shell cleanup
 alias xt='exa -bhHlST --git'
 alias x='exa -bhHlS --git'
 
