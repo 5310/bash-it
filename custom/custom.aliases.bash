@@ -12,6 +12,8 @@ alias pnpmup='sudo pnpm i -g pnpm && sudo pnpm install -g $(pnpm list -g --json 
 #alias pnpmup='sudo pnpm i -g pnpm && sudo pnpm install -g $(pnpm list -g --json | grep '"from":' | cut -d " " -f 10 | cut -c 2- | rev | cut -c 3- | rev)' # plain shell cleanup
 alias xt='exa -bhHlST --git'
 alias x='exa -bhHlS --git'
+alias temp="sensors | grep Core | cut -d + -f 2 | cut -d '.' -f 1 | tr '\r\n' ' ' && nvidia-smi -q -d temperature | grep 'GPU Current Temp' | cut -d ':' -f 2 | cut -d ' ' -f 2"
+alias temps='echo "c0 c1 c2 c3 g0" && while true; do temp; sleep 2; done'
 
 # Compile and run various fossil platforms for the masters. Remove when not needed.
 gccr () {
