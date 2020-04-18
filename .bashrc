@@ -61,3 +61,6 @@ fi
 # Export local binary path because it's needed in 18.04+
 # Now local path overrides the system one!
 export PATH="/home/$(whoami)/.local/bin:$PATH"
+
+# QT5 Configuration Manager flag
+export QT_QPA_PLATFORMTHEME="gtk2"
