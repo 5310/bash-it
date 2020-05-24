@@ -64,3 +64,7 @@ export PATH="/home/$(whoami)/.local/bin:$PATH"
 
 # QT5 Configuration Manager flag
 export QT_QPA_PLATFORMTHEME="gtk2"
+
+# deno config
+export DENO_INSTALL="/home/scio/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
