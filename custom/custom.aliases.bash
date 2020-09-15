@@ -39,14 +39,12 @@ nodels() { #TODO: pad fields
       < $package/package.json\
     )
   done
-  if ! command -v pnpm &> /dev/null; then
-    echo via pnpm:
-    for package in $(pnpm list -g --parseable --depth=0 | tail -n +2); do
-      packagename=$(basename $(dirname $package))
-      echo '  ' $packagename $(fx \
-        "x => typeof x.bin==='object' ? Object.keys(x.bin)[0]==='$packagename' ? '$' : '$ '+Object.keys(x.bin)[0] : typeof x.bin==='string' ? '$' : ''" \
-        < $package/node_modules/$packagename/package.json\
-      )
-    done
-  fi
+  echo via pnpm:
+  for package in $(pnpm list -g --parseable --depth=0 | tail -n +2); do
+    packagename=$(basename $(dirname $package))
+    echo '  ' $packagename $(fx \
+      "x => typeof x.bin==='object' ? Object.keys(x.bin)[0]==='$packagename' ? '$' : '$ '+Object.keys(x.bin)[0] : typeof x.bin==='string' ? '$' : ''" \
+      < $package/node_modules/$packagename/package.json\
+    )
+  done
 }
