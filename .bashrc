@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 # Path to the bash it configuration
-export BASH_IT="/home/$(whoami)/.bash_it"
+export BASH_IT="$HOME/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 export BASH_IT_THEME='powerline-newline'
 
 # Set custom project path.
-export PROJECT_PATHS=/mnt/Active/Projects/Personal/
+export PROJECT_PATHS="$HOME/Active/Projects/Personal/"
 
 # Reset the console output text formatting.
 trap 'printf "\e[0m" "$_"' DEBUG
@@ -35,15 +35,6 @@ export SCM_CHECK=true
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
-# Go stuff
-export GOPATH=$HOME/Documents/gopath
-
-# Rust stuff
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# OpenColorIO config
-export OCIO=/mnt/Archive/Miscellany/Color\ Profiles/active-profile/config.ocio
-
 # Ntfy integration
 eval "$(ntfy shell-integration)"
 
@@ -53,18 +44,26 @@ source $BASH_IT/bash_it.sh
 # Enable globstar
 shopt -s globstar
 
-# Setup Nix (originally added by the installed but then moved to proper file
-if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then 
-  . ~/.nix-profile/etc/profile.d/nix.sh
-fi
-
 # Export local binary path because it's needed in 18.04+
 # Now local path overrides the system one!
-export PATH="/home/$(whoami)/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Rust stuff
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# deno config
+if [ -e "$HOME/.deno" ]; then 
+  export DENO_INSTALL="$HOME/.deno"
+  export PATH="$DENO_INSTALL/bin:$PATH"
+fi
+
+# Setup Nix (originally added by the installed but then moved to proper file
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then 
+  . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+fi
+
+# OpenColorIO config
+export OCIO="$HOME/Archive/Miscellany/Color Profiles/active-profile/config.ocio"
 
 # QT5 Configuration Manager flag
 export QT_QPA_PLATFORMTHEME="gtk2"
-
-# deno config
-export DENO_INSTALL="/home/scio/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
