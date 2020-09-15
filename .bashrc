@@ -44,26 +44,25 @@ source $BASH_IT/bash_it.sh
 # Enable globstar
 shopt -s globstar
 
-# Export local binary path because it's needed in 18.04+
-# Now local path overrides the system one!
+# Local binaries
 export PATH="$HOME/.local/bin:$PATH"
 
-# Rust stuff
+# Set Rust path
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# deno config
+# Set Deno path
 if [ -e "$HOME/.deno" ]; then 
   export DENO_INSTALL="$HOME/.deno"
   export PATH="$DENO_INSTALL/bin:$PATH"
 fi
 
-# Setup Nix (originally added by the installed but then moved to proper file
+# Set OpenColorIO path
+export OCIO="$HOME/Archive/Miscellany/Color Profiles/active-profile/config.ocio"
+
+# Set QT5 Configuration Manager flag
+export QT_QPA_PLATFORMTHEME="gtk2"
+
+# Initialize Nix
 if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then 
   . "$HOME/.nix-profile/etc/profile.d/nix.sh"
 fi
-
-# OpenColorIO config
-export OCIO="$HOME/Archive/Miscellany/Color Profiles/active-profile/config.ocio"
-
-# QT5 Configuration Manager flag
-export QT_QPA_PLATFORMTHEME="gtk2"
