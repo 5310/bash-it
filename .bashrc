@@ -44,6 +44,18 @@ source $BASH_IT/bash_it.sh
 # Enable globstar
 shopt -s globstar
 
+# Bash won't get SIGWINCH if another process is in the foreground.
+# Enable checkwinsize so that bash will check the terminal size when
+# it regains control.  #65623
+# http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
+shopt -s checkwinsize
+
+# Autocomplete sudo as well
+complete -cf sudo
+
+# Close the X windoor
+xhost +local:root > /dev/null 2>&1
+
 # Local binaries
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -51,7 +63,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Set Deno path
-if [ -e "$HOME/.deno" ]; then 
+if [ -e "$HOME/.deno" ]; then
   export DENO_INSTALL="$HOME/.deno"
   export PATH="$DENO_INSTALL/bin:$PATH"
 fi
@@ -63,6 +75,6 @@ export OCIO="$HOME/Archive/Miscellany/Color Profiles/active-profile/config.ocio"
 export QT_QPA_PLATFORMTHEME="gtk2"
 
 # Initialize Nix
-if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then 
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then
   . "$HOME/.nix-profile/etc/profile.d/nix.sh"
 fi
