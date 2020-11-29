@@ -32,7 +32,7 @@ javar () {
 alias ipfspins='echo; for hash in $(ipfs pin ls -t "recursive" --quiet); do echo -n $hash; if ipfs ls $hash >/dev/null 2>/dev/null; then echo " directory:"; ipfs ls $hash | head -n 10 | sed "s/^/    /"; else echo " content:"; ipfs cat $hash | head -10 | sed "s/^/    /"; fi; echo; done'
 
 # List globally installed Node packages
-nodels() { #TODO: pad fields
+npmls () { #TODO: pad fields
   echo via npm:
   for package in $(npm list -g --parseable --depth=0 | tail -n +2); do
     packagename=$(basename $package)
@@ -52,8 +52,7 @@ nodels() { #TODO: pad fields
 }
 
 # Archive extractor
-ex ()
-{
+ex () {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1   ;;
