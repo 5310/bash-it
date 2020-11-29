@@ -1,7 +1,7 @@
 cite 'about-alias'
 about-alias 'Personal alises'
 
-alias e='nano'
+alias e='kate'
 alias aptupgd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove --purge -y'
 alias cat='bat --paging never'
 alias cp="cp -i" # confirm before overwriting something
