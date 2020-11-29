@@ -7,6 +7,7 @@ alias cat='bat --paging never'
 alias cp="cp -i" # confirm before overwriting something
 alias df='df -h' # human-readable sizes
 alias ds=ncdu
+alias gksudo=pkexec
 alias more=less
 alias xt='exa -bhHlST --git'
 alias x='exa -bhHlS --git'
