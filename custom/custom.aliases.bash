@@ -1,11 +1,13 @@
 cite 'about-alias'
 about-alias 'Personal alises'
 
-alias e='code . && echo Opening VS Code in "$(pwd)/"'
+alias e='nano'
 alias aptupgd='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove --purge -y'
 alias cat='bat --paging never'
+alias cp="cp -i" # confirm before overwriting something
+alias df='df -h' # human-readable sizes
 alias ds=ncdu
-alias git=hub
+alias more=less
 alias npmup='sudo npm update -g'
 alias pipup='sudo pip install -U $(pip list | cut -d " " -f 1 | tail -n +3)'
 alias pnpmup='sudo pnpm i -g pnpm && sudo pnpm install -g $(pnpm list -g --json | fx this[0].dependencies "Object.keys(this).join(\" \")")' # depends on npm:fx
@@ -48,3 +50,27 @@ nodels() { #TODO: pad fields
     )
   done
 }
+
+# Archive extractor
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
