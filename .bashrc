@@ -56,6 +56,9 @@ complete -cf sudo
 # Close the X windoor
 xhost +local:root > /dev/null 2>&1
 
+# Set X Input in gtk
+export GTK_IM_MODULE="xim"
+
 # Local binaries
 export PATH="$HOME/.local/bin:$PATH"
 
